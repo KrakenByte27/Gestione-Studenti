@@ -1,6 +1,6 @@
 ﻿namespace Gestione_Studenti
 {
-    partial class Form1
+    partial class homeForm
     {
         /// <summary>
         ///  Required designer variable.

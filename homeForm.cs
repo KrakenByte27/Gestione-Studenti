@@ -1,8 +1,8 @@
 namespace Gestione_Studenti
 {
-    public partial class Form1 : Form
+    public partial class homeForm : Form
     {
-        public Form1()
+        public homeForm()
         {
             InitializeComponent();
         }
