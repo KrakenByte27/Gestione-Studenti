@@ -6,5 +6,14 @@ namespace Gestione_Studenti
         {
             InitializeComponent();
         }
+
+        private void esciButton_Click(object sender, EventArgs e)
+        {
+            if(DialogResult.Yes==MessageBox.Show("Sei sciuro di voler uscire?",
+                                                 "Attenzione",
+                                                 MessageBoxButtons.YesNo,
+                                                 MessageBoxIcon.Question)) 
+                Application.Exit();
+        }
     }
 }
