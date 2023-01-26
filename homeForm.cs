@@ -51,7 +51,7 @@ namespace Gestione_Studenti
             else
             {
                 gg = Convert.ToInt32(ggTextBox.Texts);
-                if (gg > 31)
+                if (gg > 31||gg<1)
                 {
                     ggTextBox.BackColor = Color.FromArgb(255, 159, 67);
                     checkGg = false;
@@ -71,7 +71,7 @@ namespace Gestione_Studenti
             else
             {
                 mm = Convert.ToInt32(mmTextBox.Texts);
-                if (mm > 12)
+                if (mm > 12||mm<1)
                 {
                     mmTextBox.BackColor = Color.FromArgb(255, 159, 67);
                     checkMm = false;
