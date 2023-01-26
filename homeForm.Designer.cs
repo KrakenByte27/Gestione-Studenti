@@ -30,9 +30,11 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.roundedPanel1 = new Gestione_Studenti.RoundedPanel();
+            this.aaTextBox = new CustomControls.RJControls.RJTextBox();
+            this.mmTextBox = new CustomControls.RJControls.RJTextBox();
             this.annoTextBox = new CustomControls.RJControls.RJTextBox();
             this.corsoTextBox = new CustomControls.RJControls.RJTextBox();
-            this.etaTextBox = new CustomControls.RJControls.RJTextBox();
+            this.ggTextBox = new CustomControls.RJControls.RJTextBox();
             this.cognomeTextBox = new CustomControls.RJControls.RJTextBox();
             this.nomeTextBox = new CustomControls.RJControls.RJTextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -63,9 +65,11 @@
             // 
             this.roundedPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(191)))), ((int)(((byte)(107)))));
             this.roundedPanel1.BorderColor = System.Drawing.Color.White;
+            this.roundedPanel1.Controls.Add(this.aaTextBox);
+            this.roundedPanel1.Controls.Add(this.mmTextBox);
             this.roundedPanel1.Controls.Add(this.annoTextBox);
             this.roundedPanel1.Controls.Add(this.corsoTextBox);
-            this.roundedPanel1.Controls.Add(this.etaTextBox);
+            this.roundedPanel1.Controls.Add(this.ggTextBox);
             this.roundedPanel1.Controls.Add(this.cognomeTextBox);
             this.roundedPanel1.Controls.Add(this.nomeTextBox);
             this.roundedPanel1.Controls.Add(this.label6);
@@ -78,6 +82,52 @@
             this.roundedPanel1.Name = "roundedPanel1";
             this.roundedPanel1.Size = new System.Drawing.Size(353, 320);
             this.roundedPanel1.TabIndex = 1;
+            // 
+            // aaTextBox
+            // 
+            this.aaTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(150)))), ((int)(((byte)(84)))));
+            this.aaTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(222)))), ((int)(((byte)(129)))));
+            this.aaTextBox.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(203)))), ((int)(((byte)(186)))));
+            this.aaTextBox.BorderRadius = 18;
+            this.aaTextBox.BorderSize = 2;
+            this.aaTextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.aaTextBox.ForeColor = System.Drawing.Color.White;
+            this.aaTextBox.Location = new System.Drawing.Point(141, 162);
+            this.aaTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.aaTextBox.Multiline = false;
+            this.aaTextBox.Name = "aaTextBox";
+            this.aaTextBox.Padding = new System.Windows.Forms.Padding(15, 7, 15, 7);
+            this.aaTextBox.PasswordChar = false;
+            this.aaTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.aaTextBox.PlaceholderText = "AAAA";
+            this.aaTextBox.Size = new System.Drawing.Size(193, 38);
+            this.aaTextBox.TabIndex = 9;
+            this.aaTextBox.Texts = "";
+            this.aaTextBox.UnderlinedStyle = false;
+            this.aaTextBox._TextChanged += new System.EventHandler(this.aaTextBox__TextChanged);
+            // 
+            // mmTextBox
+            // 
+            this.mmTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(150)))), ((int)(((byte)(84)))));
+            this.mmTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(222)))), ((int)(((byte)(129)))));
+            this.mmTextBox.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(203)))), ((int)(((byte)(186)))));
+            this.mmTextBox.BorderRadius = 18;
+            this.mmTextBox.BorderSize = 2;
+            this.mmTextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.mmTextBox.ForeColor = System.Drawing.Color.White;
+            this.mmTextBox.Location = new System.Drawing.Point(239, 122);
+            this.mmTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.mmTextBox.Multiline = false;
+            this.mmTextBox.Name = "mmTextBox";
+            this.mmTextBox.Padding = new System.Windows.Forms.Padding(15, 7, 15, 7);
+            this.mmTextBox.PasswordChar = false;
+            this.mmTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.mmTextBox.PlaceholderText = "MM";
+            this.mmTextBox.Size = new System.Drawing.Size(95, 38);
+            this.mmTextBox.TabIndex = 8;
+            this.mmTextBox.Texts = "";
+            this.mmTextBox.UnderlinedStyle = false;
+            this.mmTextBox._TextChanged += new System.EventHandler(this.mmTextBox__TextChanged);
             // 
             // annoTextBox
             // 
@@ -95,11 +145,12 @@
             this.annoTextBox.Padding = new System.Windows.Forms.Padding(15, 7, 15, 7);
             this.annoTextBox.PasswordChar = false;
             this.annoTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.annoTextBox.PlaceholderText = "";
+            this.annoTextBox.PlaceholderText = "4";
             this.annoTextBox.Size = new System.Drawing.Size(193, 38);
-            this.annoTextBox.TabIndex = 9;
+            this.annoTextBox.TabIndex = 11;
             this.annoTextBox.Texts = "";
             this.annoTextBox.UnderlinedStyle = false;
+            this.annoTextBox._TextChanged += new System.EventHandler(this.annoTextBox__TextChanged);
             // 
             // corsoTextBox
             // 
@@ -110,40 +161,42 @@
             this.corsoTextBox.BorderSize = 2;
             this.corsoTextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.corsoTextBox.ForeColor = System.Drawing.Color.White;
-            this.corsoTextBox.Location = new System.Drawing.Point(141, 204);
+            this.corsoTextBox.Location = new System.Drawing.Point(141, 218);
             this.corsoTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.corsoTextBox.Multiline = false;
             this.corsoTextBox.Name = "corsoTextBox";
             this.corsoTextBox.Padding = new System.Windows.Forms.Padding(15, 7, 15, 7);
             this.corsoTextBox.PasswordChar = false;
             this.corsoTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.corsoTextBox.PlaceholderText = "";
+            this.corsoTextBox.PlaceholderText = "B INF";
             this.corsoTextBox.Size = new System.Drawing.Size(193, 38);
-            this.corsoTextBox.TabIndex = 8;
+            this.corsoTextBox.TabIndex = 10;
             this.corsoTextBox.Texts = "";
             this.corsoTextBox.UnderlinedStyle = false;
+            this.corsoTextBox._TextChanged += new System.EventHandler(this.corsoTextBox__TextChanged);
             // 
-            // etaTextBox
+            // ggTextBox
             // 
-            this.etaTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(150)))), ((int)(((byte)(84)))));
-            this.etaTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(222)))), ((int)(((byte)(129)))));
-            this.etaTextBox.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(203)))), ((int)(((byte)(186)))));
-            this.etaTextBox.BorderRadius = 19;
-            this.etaTextBox.BorderSize = 2;
-            this.etaTextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.etaTextBox.ForeColor = System.Drawing.Color.White;
-            this.etaTextBox.Location = new System.Drawing.Point(141, 140);
-            this.etaTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.etaTextBox.Multiline = false;
-            this.etaTextBox.Name = "etaTextBox";
-            this.etaTextBox.Padding = new System.Windows.Forms.Padding(15, 7, 15, 7);
-            this.etaTextBox.PasswordChar = false;
-            this.etaTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.etaTextBox.PlaceholderText = "";
-            this.etaTextBox.Size = new System.Drawing.Size(193, 38);
-            this.etaTextBox.TabIndex = 7;
-            this.etaTextBox.Texts = "";
-            this.etaTextBox.UnderlinedStyle = false;
+            this.ggTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(150)))), ((int)(((byte)(84)))));
+            this.ggTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(222)))), ((int)(((byte)(129)))));
+            this.ggTextBox.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(203)))), ((int)(((byte)(186)))));
+            this.ggTextBox.BorderRadius = 18;
+            this.ggTextBox.BorderSize = 2;
+            this.ggTextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ggTextBox.ForeColor = System.Drawing.Color.White;
+            this.ggTextBox.Location = new System.Drawing.Point(141, 122);
+            this.ggTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.ggTextBox.Multiline = false;
+            this.ggTextBox.Name = "ggTextBox";
+            this.ggTextBox.Padding = new System.Windows.Forms.Padding(15, 7, 15, 7);
+            this.ggTextBox.PasswordChar = false;
+            this.ggTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.ggTextBox.PlaceholderText = "GG";
+            this.ggTextBox.Size = new System.Drawing.Size(95, 38);
+            this.ggTextBox.TabIndex = 7;
+            this.ggTextBox.Texts = "";
+            this.ggTextBox.UnderlinedStyle = false;
+            this.ggTextBox._TextChanged += new System.EventHandler(this.ggTextBox__TextChanged);
             // 
             // cognomeTextBox
             // 
@@ -154,18 +207,19 @@
             this.cognomeTextBox.BorderSize = 2;
             this.cognomeTextBox.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cognomeTextBox.ForeColor = System.Drawing.Color.White;
-            this.cognomeTextBox.Location = new System.Drawing.Point(141, 75);
+            this.cognomeTextBox.Location = new System.Drawing.Point(141, 64);
             this.cognomeTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.cognomeTextBox.Multiline = false;
             this.cognomeTextBox.Name = "cognomeTextBox";
             this.cognomeTextBox.Padding = new System.Windows.Forms.Padding(15, 7, 15, 7);
             this.cognomeTextBox.PasswordChar = false;
             this.cognomeTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.cognomeTextBox.PlaceholderText = "";
+            this.cognomeTextBox.PlaceholderText = "---";
             this.cognomeTextBox.Size = new System.Drawing.Size(193, 38);
             this.cognomeTextBox.TabIndex = 6;
             this.cognomeTextBox.Texts = "";
             this.cognomeTextBox.UnderlinedStyle = false;
+            this.cognomeTextBox._TextChanged += new System.EventHandler(this.cognomeTextBox__TextChanged);
             // 
             // nomeTextBox
             // 
@@ -183,11 +237,12 @@
             this.nomeTextBox.Padding = new System.Windows.Forms.Padding(15, 7, 15, 7);
             this.nomeTextBox.PasswordChar = false;
             this.nomeTextBox.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.nomeTextBox.PlaceholderText = "";
+            this.nomeTextBox.PlaceholderText = "---";
             this.nomeTextBox.Size = new System.Drawing.Size(193, 38);
             this.nomeTextBox.TabIndex = 5;
             this.nomeTextBox.Texts = "";
             this.nomeTextBox.UnderlinedStyle = false;
+            this.nomeTextBox._TextChanged += new System.EventHandler(this.nomeTextBox__TextChanged);
             // 
             // label6
             // 
@@ -205,7 +260,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(39, 211);
+            this.label5.Location = new System.Drawing.Point(39, 225);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 24);
             this.label5.TabIndex = 3;
@@ -216,18 +271,18 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(52, 147);
+            this.label4.Location = new System.Drawing.Point(31, 134);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 24);
+            this.label4.Size = new System.Drawing.Size(84, 48);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Età";
+            this.label4.Text = "Data di\r\nnascita";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(15, 82);
+            this.label3.Location = new System.Drawing.Point(15, 71);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 24);
             this.label3.TabIndex = 1;
@@ -271,7 +326,7 @@
             this.esciButton.Location = new System.Drawing.Point(16, 236);
             this.esciButton.Name = "esciButton";
             this.esciButton.Size = new System.Drawing.Size(179, 70);
-            this.esciButton.TabIndex = 2;
+            this.esciButton.TabIndex = 14;
             this.esciButton.Text = "Esci";
             this.esciButton.TextColor = System.Drawing.Color.White;
             this.esciButton.UseVisualStyleBackColor = false;
@@ -291,10 +346,11 @@
             this.azzeraButton.Location = new System.Drawing.Point(16, 160);
             this.azzeraButton.Name = "azzeraButton";
             this.azzeraButton.Size = new System.Drawing.Size(179, 70);
-            this.azzeraButton.TabIndex = 1;
+            this.azzeraButton.TabIndex = 13;
             this.azzeraButton.Text = "Azzera";
             this.azzeraButton.TextColor = System.Drawing.Color.White;
             this.azzeraButton.UseVisualStyleBackColor = false;
+            this.azzeraButton.Click += new System.EventHandler(this.azzeraButton_Click);
             // 
             // checkButton
             // 
@@ -310,10 +366,11 @@
             this.checkButton.Location = new System.Drawing.Point(15, 12);
             this.checkButton.Name = "checkButton";
             this.checkButton.Size = new System.Drawing.Size(179, 142);
-            this.checkButton.TabIndex = 0;
+            this.checkButton.TabIndex = 12;
             this.checkButton.Text = "Controlla";
             this.checkButton.TextColor = System.Drawing.Color.White;
             this.checkButton.UseVisualStyleBackColor = false;
+            this.checkButton.Click += new System.EventHandler(this.checkButton_Click);
             // 
             // homeForm
             // 
@@ -342,7 +399,7 @@
         private RoundedPanel roundedPanel1;
         private CustomControls.RJControls.RJTextBox annoTextBox;
         private CustomControls.RJControls.RJTextBox corsoTextBox;
-        private CustomControls.RJControls.RJTextBox etaTextBox;
+        private CustomControls.RJControls.RJTextBox ggTextBox;
         private CustomControls.RJControls.RJTextBox cognomeTextBox;
         private CustomControls.RJControls.RJTextBox nomeTextBox;
         private Label label6;
@@ -354,5 +411,7 @@
         private CustomControls.RJControls.RJButton esciButton;
         private CustomControls.RJControls.RJButton azzeraButton;
         private CustomControls.RJControls.RJButton checkButton;
+        private CustomControls.RJControls.RJTextBox aaTextBox;
+        private CustomControls.RJControls.RJTextBox mmTextBox;
     }
 }
